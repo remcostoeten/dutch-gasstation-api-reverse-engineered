@@ -1,21 +1,18 @@
 export type GasStation = {
-    distance: number
+    name: string;
     fuel: {
-        fuelPrice: number
-        lastUpdated: string
-    }
+        fuelPrice: number;
+        lastUpdated: string;
+    };
     location: {
         address: {
-            city: string
-            houseNumber: string
-            postcode: string
-            province: string
-            streetName: string
-        }
+            city: string;
+            province: string;
+        };
         coordinates: {
-            latitude: number
-            longitude: number
-        }
-    }
-    name: string
-}
+            latitude: number;
+            longitude: number;
+        };
+    };
+};
+1
