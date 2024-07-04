@@ -5,6 +5,7 @@ import Search from './search/Search';
 import GasStationList from './GasStationList';
 import GasStationMap from './GasStationMap';
 import { GasStation } from '@/core/types';
+import PushButton from './SentPushNotificationt';
 
 type HomeWrapperProps = {
     initialStations: GasStation[];
@@ -16,7 +17,7 @@ export default function HomeWrapper({ initialStations }: HomeWrapperProps) {
 
     return (
         <>
-            <Search
+            <PushButton />            <Search
                 onSearchStart={() => setIsSearching(true)}
                 onSearchEnd={(results) => {
                     setStations(results);

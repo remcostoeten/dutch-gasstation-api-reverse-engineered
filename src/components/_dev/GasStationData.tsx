@@ -1,4 +1,4 @@
-import { getData } from '@/core/server/actions'
+import { getData } from '@/core/server/getData'
 import type { GasStation } from '@/core/types'
 
 export default async function GasStationData() {

@@ -26,7 +26,7 @@ export async function getGasStations(
     }
 
     const API_URL = `${API_BASE_URL}?${params.toString()}`;
-
+    console.log(API_URL);
     const response = await fetch(API_URL);
     if (!response.ok) {
         throw new Error('Failed to fetch data');
@@ -37,7 +37,7 @@ export async function getGasStations(
 
 export async function getMultipleCitiesGasStations(): Promise<GasStation[]> {
     const cities = ['Amsterdam', 'Rotterdam', 'Utrecht', 'Groningen', 'Maastricht'];
-    const allStations: GasStation[] = [];
+    const allStations: GasStation[] = [];   
 
     for (const city of cities) {
         const stations = await getGasStations(city);

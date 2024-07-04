@@ -2,14 +2,10 @@
 
 import type { GasStation } from '@/core/types'
 
-export type GasStationsResponse = {
-    gasStations: GasStation[]
-}
-
 export async function getData(): Promise<GasStation[]> {
     const API_URL = process.env.NEXT_PUBLIC_API_URL
 
-    if (!API_URL) {
+    if (API_URL) {
         throw new Error('API_URL is not defined')
     }
 
@@ -19,4 +15,8 @@ export async function getData(): Promise<GasStation[]> {
     }
     const data: GasStationsResponse = await response.json()
     return data.gasStations
+}
+
+export type GasStationsResponse = {
+    gasStations: GasStation[]
 }
